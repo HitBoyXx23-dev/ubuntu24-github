@@ -24,6 +24,7 @@ Wait for the container to finish building.
 Run:
 
 ```bash
+sudo su
 chmod +x start.sh
 ./start.sh
 ```
