@@ -5,35 +5,94 @@
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <title>Ubuntu 24.04</title>
   <style>
-    *{box-sizing:border-box}html,body{min-height:100%;margin:0}body{display:grid;place-items:center;padding:24px;color:#fff;background:radial-gradient(circle at 50% 0,#31146e 0,#100c22 38%,#05050b 75%);font-family:Inter,system-ui,sans-serif}main{width:min(820px,100%)}.brand{display:flex;align-items:center;gap:14px;margin-bottom:28px}.logo{display:grid;place-items:center;width:56px;height:56px;border-radius:18px;background:linear-gradient(135deg,#5b7cff,#9b4dff);box-shadow:0 18px 50px #714cff55;font-size:27px;font-weight:900}.eyebrow{margin:0 0 4px;color:#928da8;font-size:13px;letter-spacing:.15em;text-transform:uppercase}h1{margin:0;font-size:clamp(30px,6vw,54px);line-height:1.05}p{margin:12px 0 0;color:#bbb6cf;line-height:1.65}.status{display:inline-flex;align-items:center;gap:9px;margin-top:18px;padding:8px 12px;border:1px solid #37324d;border-radius:999px;background:#0d0c16cc;color:#ded9eb;font-size:13px}.dot{width:9px;height:9px;border-radius:50%;background:#45e38b;box-shadow:0 0 18px #45e38b}.grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px;margin-top:30px}.card{position:relative;overflow:hidden;display:block;min-height:245px;padding:27px;color:#fff;text-decoration:none;border:1px solid #38324f;border-radius:22px;background:linear-gradient(145deg,#171525,#0b0a12);box-shadow:0 25px 70px #0008;transition:transform .18s ease,border-color .18s ease,box-shadow .18s ease}.card:before{content:"";position:absolute;inset:-80px auto auto -80px;width:180px;height:180px;border-radius:50%;background:#714cff22;filter:blur(8px)}.card:hover{transform:translateY(-5px);border-color:#775cff;box-shadow:0 30px 90px #000a}.icon{position:relative;display:grid;place-items:center;width:54px;height:54px;margin-bottom:48px;border-radius:16px;background:linear-gradient(135deg,#4266ff,#9145ff);font-size:24px;font-weight:800}.card strong{position:relative;display:block;margin-bottom:10px;font-size:25px}.card span{position:relative;color:#aaa5bd;line-height:1.55}.arrow{position:absolute;right:24px;bottom:24px;color:#7f68ff;font-size:25px}footer{margin-top:22px;color:#716d82;font-size:13px;text-align:center}@media(max-width:650px){.grid{grid-template-columns:1fr}.card{min-height:210px}.icon{margin-bottom:34px}}
+    * { box-sizing: border-box; }
+    html, body { min-height: 100%; margin: 0; }
+    body {
+      color: #f7f7f7;
+      background: #2c001e;
+      font-family: Ubuntu, Cantarell, Arial, sans-serif;
+    }
+    header {
+      height: 48px;
+      display: flex;
+      align-items: center;
+      padding: 0 22px;
+      background: #3b0b2b;
+      border-bottom: 1px solid rgba(255,255,255,.14);
+    }
+    header strong { font-size: 15px; font-weight: 600; }
+    main {
+      width: min(700px, calc(100% - 32px));
+      margin: 64px auto;
+    }
+    h1 { margin: 0; font-size: 30px; font-weight: 500; }
+    .subtitle { margin: 8px 0 28px; color: #d2c5cc; font-size: 15px; }
+    .panel {
+      overflow: hidden;
+      background: #3b0b2b;
+      border: 1px solid rgba(255,255,255,.14);
+      border-radius: 8px;
+    }
+    .item {
+      display: flex;
+      align-items: center;
+      min-height: 92px;
+      padding: 18px 20px;
+      color: #fff;
+      text-decoration: none;
+      border-bottom: 1px solid rgba(255,255,255,.12);
+    }
+    .item:last-child { border-bottom: 0; }
+    .item:hover { background: #4b1238; }
+    .icon {
+      width: 42px;
+      height: 42px;
+      display: grid;
+      place-items: center;
+      margin-right: 16px;
+      flex: 0 0 auto;
+      color: #fff;
+      background: #e95420;
+      border-radius: 6px;
+      font-family: monospace;
+      font-size: 18px;
+      font-weight: 700;
+    }
+    .content { min-width: 0; flex: 1; }
+    .title { display: block; margin-bottom: 4px; font-size: 17px; font-weight: 600; }
+    .description { display: block; color: #cbbdc6; font-size: 14px; line-height: 1.4; }
+    .arrow { margin-left: 18px; color: #d8cdd3; font-size: 20px; }
+    footer { margin-top: 16px; color: #b9a8b2; font-size: 13px; }
+    @media (max-width: 520px) {
+      main { margin-top: 36px; }
+      .item { min-height: 86px; padding: 16px; }
+    }
   </style>
 </head>
 <body>
+  <header><strong>Ubuntu 24.04</strong></header>
   <main>
-    <div class="brand">
-      <div class="logo">U</div>
-      <div>
-        <div class="eyebrow">GitHub Codespaces</div>
-        <h1>Ubuntu 24.04</h1>
-      </div>
-    </div>
-    <p>Choose how you want to enter your Ubuntu workspace.</p>
-    <div class="status"><span class="dot"></span>Workspace online</div>
-    <section class="grid">
-      <a class="card" href="/desktop/vnc.html?autoconnect=true&resize=scale&path=websockify">
-        <div class="icon">▣</div>
-        <strong>Desktop</strong>
-        <span>Open the graphical Ubuntu workspace through noVNC.</span>
-        <div class="arrow">→</div>
+    <h1>Choose a workspace</h1>
+    <p class="subtitle">Open the desktop or use the terminal.</p>
+    <section class="panel">
+      <a class="item" href="/desktop/vnc.html?autoconnect=true&resize=scale&path=websockify">
+        <span class="icon">▣</span>
+        <span class="content">
+          <span class="title">Desktop</span>
+          <span class="description">Open the graphical Ubuntu desktop.</span>
+        </span>
+        <span class="arrow">›</span>
       </a>
-      <a class="card" href="/terminal/">
-        <div class="icon">›_</div>
-        <strong>Terminal</strong>
-        <span>Open the password-protected Ubuntu command line.</span>
-        <div class="arrow">→</div>
+      <a class="item" href="/terminal/">
+        <span class="icon">&gt;_</span>
+        <span class="content">
+          <span class="title">Terminal</span>
+          <span class="description">Open the Ubuntu command line.</span>
+        </span>
+        <span class="arrow">›</span>
       </a>
     </section>
-    <footer>Terminal username: user · Default passwords: 1234</footer>
+    <footer>Terminal username: user · Default password: 1234</footer>
   </main>
 </body>
 </html>
