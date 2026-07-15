@@ -56,4 +56,5 @@ in terminal/desktop
 
 ```paste
 cd ~
+sudo su
 ```
