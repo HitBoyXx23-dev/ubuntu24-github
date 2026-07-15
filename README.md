@@ -49,3 +49,11 @@ Desktop Password
 ```
 1234
 ```
+
+## Get into ubuntu
+
+in terminal/desktop
+
+```paste
+cd ~
+```
